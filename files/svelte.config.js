@@ -14,7 +14,7 @@ const config = {
 				port: 3000
 			},
 			define: {
-				// env-cmd
+				// env-cmd https://blog.hdks.org/Environment-Variables-in-SvelteKit-and-Vercel/
 				'process.env': process.env
 			}
 		}
