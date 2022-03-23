@@ -52,27 +52,53 @@ if [[ "$option" == "y" ]]; then
 
     npm install --verbose
 
+    npm install --save-dev tailwindcss postcss autoprefixer --verbose
+
+    npx tailwindcss init tailwind.config.cjs -p
+
+    mv postcss.config.js postcss.config.cjs
+
+    npm install --sve-dev @sveltejs/adapter-node@next --verbose
+
     npm install --save-dev env-cmd --verbose
 
     # copy /shared/httpd/SHELL/skit/files/ to project folder, this includes the .vscode folder with the settings.json file
     rsync -a "$script_path_files" . || exit 1
 
+
+    # https://onlinelinuxtools.com/escape-shell-characters
+
+
     # replace exact SVELTE_KIT_PROJECT_PATH string in file .vscode/settings.json with project $name
     # https://askubuntu.com/a/1007368
     sed -i "s/SVELTE_KIT_PROJECT_PATH/$name/g" .vscode/settings.json
 
+
     # replace exact \"svelte-kit dev\" string in file package.json with "env-cmd svelte-kit dev"
     # https://askubuntu.com/a/1007368
-    env_cmd_sveltekit_dev="\"env-cmd svelte-kit dev\""
-    
+    env_cmd_sveltekit_dev="\"env-cmd svelte-kit dev\""    
     sed -i "s/\"svelte-kit dev\"/$env_cmd_sveltekit_dev/g" package.json
+
+
+    # replace exact \"svelte-kit build\" string in file package.json with "env-cmd svelte-kit dev"
+    env_cmd_sveltekit_build="\"env-cmd svelte-kit build\""    
+    sed -i "s/\"svelte-kit build\"/$env_cmd_sveltekit_build/g" package.json
+
 
     # add .vscode to .gitignore file
     # https://www.cyberciti.biz/faq/linux-append-text-to-end-of-file/
-
     echo ".vscode" >> .gitignore
 
+    mv app.css ./src/app.css
+
+    mv __layout.svelte ./src/routes/__layout.svelte
+
+    mv index.svelte ./src/routes/index.svelte
+
     rm -rf .prettierrc
+
+
+
 
 
     echo "**************************************************************"
