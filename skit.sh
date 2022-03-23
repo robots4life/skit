@@ -58,7 +58,7 @@ if [[ "$option" == "y" ]]; then
 
     mv postcss.config.js postcss.config.cjs
 
-    npm install --sve-dev @sveltejs/adapter-node@next --verbose
+    npm install --save-dev @sveltejs/adapter-node@next --verbose
 
     npm install --save-dev env-cmd --verbose
 
