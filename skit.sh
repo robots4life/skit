@@ -52,15 +52,15 @@ if [[ "$option" == "y" ]]; then
 
     npm install --verbose
 
-    npm install --save-dev tailwindcss postcss autoprefixer --verbose
+    npm install --save-dev tailwindcss postcss autoprefixer @sveltejs/adapter-node@next env-cmd --verbose
 
     npx tailwindcss init tailwind.config.cjs -p
 
     mv postcss.config.js postcss.config.cjs
 
-    npm install --save-dev @sveltejs/adapter-node@next --verbose
+    # npm install --save-dev @sveltejs/adapter-node@next --verbose
 
-    npm install --save-dev env-cmd --verbose
+    # npm install --save-dev env-cmd --verbose
 
     # copy /shared/httpd/SHELL/skit/files/ to project folder, this includes the .vscode folder with the settings.json file
     rsync -a "$script_path_files" . || exit 1
