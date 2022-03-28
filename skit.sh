@@ -80,12 +80,12 @@ if [[ "$option" == "y" ]]; then
     sed -i "s/\"svelte-kit dev\"/$env_cmd_sveltekit_dev/g" package.json
 
 
-    # replace exact \"svelte-kit build\" string in file package.json with "env-cmd svelte-kit dev"
-    env_cmd_sveltekit_build="\"env-cmd svelte-kit build && ./copy.sh\""    
+    # replace exact \"svelte-kit build\" string in file package.json with "env-cmd svelte-kit build && ./copy.sh"
+    env_cmd_sveltekit_build="\"env-cmd svelte-kit build \&\& \.\/copy.sh\""    
     sed -i "s/\"svelte-kit build\"/$env_cmd_sveltekit_build/g" package.json
 
 
-    # add .vscode to .gitignore file
+    # app .vscode to .gitignore file
     # https://www.cyberciti.biz/faq/linux-append-text-to-end-of-file/
     echo ".vscode" >> .gitignore
 
@@ -94,6 +94,8 @@ if [[ "$option" == "y" ]]; then
     mv __layout.svelte ./src/routes/__layout.svelte
 
     mv index.svelte ./src/routes/index.svelte
+
+    mv app.html ./src/app.html
 
     rm -rf .prettierrc
 
