@@ -10,7 +10,7 @@ static_path="/shared/httpd/static/"
 
 source_path=$(pwd)
 
-echo $source_path
+# echo $source_path
 
 source_build_path=$source_path"/build/"
 
@@ -18,7 +18,7 @@ echo $source_build_path
 
 cd $static_path
 
-pwd
+# pwd
 
 rm -rf *
 
@@ -26,6 +26,6 @@ mkdir htdocs
 
 cd htdocs
 
-pwd
+# pwd
 
 rsync -a "$source_build_path" . || exit 1
