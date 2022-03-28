@@ -5,7 +5,7 @@
 
 # run this script
 # chmod +x skit.sh
-# ./kit.sh
+# ./skit.sh
 
 # ask for dir to install to
 clear
