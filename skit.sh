@@ -81,7 +81,7 @@ if [[ "$option" == "y" ]]; then
 
 
     # replace exact \"svelte-kit build\" string in file package.json with "env-cmd svelte-kit dev"
-    env_cmd_sveltekit_build="\"env-cmd svelte-kit build\""    
+    env_cmd_sveltekit_build="\"env-cmd svelte-kit build && ./copy.sh\""    
     sed -i "s/\"svelte-kit build\"/$env_cmd_sveltekit_build/g" package.json
 
 
