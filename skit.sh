@@ -52,7 +52,7 @@ if [[ "$option" == "y" ]]; then
 
     npm install --verbose
 
-    npm install --save-dev tailwindcss postcss autoprefixer @sveltejs/adapter-node@next env-cmd --verbose
+    npm install --save-dev tailwindcss postcss autoprefixer @sveltejs/adapter-node@next @sveltejs/adapter-static@next env-cmd --verbose
 
     npx tailwindcss init tailwind.config.cjs -p
 
