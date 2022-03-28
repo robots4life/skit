@@ -1,8 +1,8 @@
 #! /usr/bin/env bash
 
 # run this script
-# chmod +x move.sh
-# ./move.sh
+# chmod +x copy.sh
+# ./copy.sh
 
 static_htdocs="/shared/httpd/static/htdocs/"
 
