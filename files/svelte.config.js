@@ -11,12 +11,12 @@ const config = {
 		// @sveltejs/adapter-auto
 		// adapter: adapter(),
 
-		// Adapter Node
+		// Adapter Node start
 		// https://github.com/sveltejs/kit/tree/master/packages/adapter-node
 		// adapter: adapter({ out: 'build' }),
 		// Adapter Node end
 
-		// Adapter Static
+		// Adapter Static start
 		// https://github.com/sveltejs/kit/tree/master/packages/adapter-static
 		adapter: adapter({
 			// default options are shown
