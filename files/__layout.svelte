@@ -2,6 +2,6 @@
 	import '../app.css';
 </script>
 
-<main class="container border">
+<main>
 	<slot />
 </main>
