@@ -52,11 +52,13 @@ if [[ "$option" == "y" ]]; then
 
     npm install --verbose
 
-    npm install --save-dev tailwindcss postcss autoprefixer @sveltejs/adapter-node@next @sveltejs/adapter-static@next env-cmd --verbose
+    # npm install --save-dev tailwindcss postcss autoprefixer @sveltejs/adapter-node@next @sveltejs/adapter-static@next env-cmd --verbose
 
-    npx tailwindcss init tailwind.config.cjs -p
+    npm install --save-dev @sveltejs/adapter-node@next @sveltejs/adapter-static@next env-cmd --verbose
 
-    mv postcss.config.js postcss.config.cjs
+    # npx tailwindcss init tailwind.config.cjs -p
+
+    # mv postcss.config.js postcss.config.cjs
 
     # npm install --save-dev @sveltejs/adapter-node@next --verbose
 
@@ -89,7 +91,7 @@ if [[ "$option" == "y" ]]; then
     # https://www.cyberciti.biz/faq/linux-append-text-to-end-of-file/
     echo ".vscode" >> .gitignore
 
-    mv app.css ./src/app.css
+    # mv app.css ./src/app.css
 
     mv __layout.svelte ./src/routes/__layout.svelte
 
