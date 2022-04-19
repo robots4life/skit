@@ -46,7 +46,9 @@ if [[ "$option" == "y" ]]; then
     mkdir "$name" || exit 1
     cd "$name" || exit 1
 
-    npm init svelte@next .
+    # npm init svelte@next .
+
+    npm init svelte .
 
     cd "$www_path/$name"
 
