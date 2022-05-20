@@ -3,3 +3,4 @@
 + vhost-gen template
 + SvelteKit
 + env-cmd
++ $root alias
